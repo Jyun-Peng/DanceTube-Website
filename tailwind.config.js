@@ -3,7 +3,9 @@ module.exports = {
     theme: {
         colors: {
             black: '#333333',
+            gray: '#545454',
             white: '#fefefe',
+            main: '#D355FF',
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
@@ -17,6 +19,11 @@ module.exports = {
             borderRadius: {
                 '4xl': '2rem',
             },
+        },
+        fontSize: {
+            sm: ['0.875rem', '1'],
+            lg: ['1.125rem', '1'],
+            xl: ['1.25rem', '1'],
         },
     },
     plugins: [],

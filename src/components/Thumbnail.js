@@ -1,4 +1,5 @@
 import react from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
@@ -10,15 +11,17 @@ const StyledContainer = styled.div`
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
 `;
 
-function Thumbnail({ index, imageURL, title }) {
+function Thumbnail({ imageURL = '', title = '', videoId = '' }) {
     console.log(imageURL);
     return (
-        <StyledContainer key={index}>
-            <img src={imageURL} alt="image" className="w-full" />
-            <div className="bg-white text-base max-h-[3.5rem] absolute bottom-0 px-4 py-3 bg-gray text-white font-bold">
-                {title}
-            </div>
-        </StyledContainer>
+        <Link to={`/player/${videoId}`} style={{ display: 'inline-block' }}>
+            <StyledContainer>
+                <img src={imageURL} alt="image" className="w-full" />
+                <div className="bg-white text-base max-h-[3.5rem] absolute bottom-0 px-4 py-3 bg-gray text-white font-bold">
+                    {title}
+                </div>
+            </StyledContainer>
+        </Link>
     );
 }
 

@@ -1,9 +1,9 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 
-function Button({ text, search }) {
+function Button({ text, keyword }) {
     return (
-        <Link to={`/style:${search}`}>
+        <Link to={`/style/${keyword}`}>
             <button className="text-sm bg-main px-3 py-1.5 rounded-full font-bold text-white">{text}</button>
         </Link>
     );

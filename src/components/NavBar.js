@@ -1,5 +1,6 @@
 import react from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { searchVideo } from '../functional/SearchVideo';
 import DefaultContainer from '../layout/DefaultContainer';
 
@@ -19,7 +20,9 @@ function NavBar({ dropdown }) {
     return (
         <StyledHeader>
             <DefaultContainer>
-                <h3 className="text-[1.5rem] text-white font-bold">DanceTube</h3>
+                <Link to="/">
+                    <h3 className="text-[1.5rem] text-white font-bold">DanceTube</h3>
+                </Link>
 
                 <div className="flex">{dropdown && <div className="text-white">style</div>}</div>
             </DefaultContainer>

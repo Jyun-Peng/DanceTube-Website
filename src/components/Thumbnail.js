@@ -2,6 +2,14 @@ import react from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+const StyledImage = styled.img`
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-fit: center;
+    filter: saturate(80%);
+`;
+
 const StyledContainer = styled.div`
     width: 22rem;
     flex: 1 0 auto;
@@ -25,18 +33,17 @@ const ThumbnailTitle = styled.div`
 
     & > p {
         font-size: 0.9rem;
-        color: #dddddd;
+        color: rgba(225, 225, 225, 0.8);
         margin-bottom: 0.25rem;
     }
 `;
 
 function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '' }) {
-    console.log(imageURL);
     publishedDate = publishedDate.split('T')[0];
     return (
         <Link to={`/player/${videoId}`} style={{ display: 'inline-block' }}>
             <StyledContainer>
-                <img src={imageURL} alt="image" className="w-full h-[12rem] object-cover object-center" />
+                <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
                     <p>{`發布日期：${publishedDate}`}</p>
                     <h3>{title}</h3>

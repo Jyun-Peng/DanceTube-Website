@@ -35,7 +35,6 @@ const ThumbnailTitle = styled.div`
 
     & > h4 {
         font-size: 1rem;
-        font-weight: 600;
         line-height: 1.2;
         color: var(--gray-text);
         overflow: hidden;
@@ -48,7 +47,14 @@ const ThumbnailTitle = styled.div`
     }
 `;
 
-function BigThumbnail({ imageURL = '', title = '', description = '', videoId = '', publishedDate = '', keyword = '' }) {
+function BigThumbnail({
+    imageURL = '',
+    title = '',
+    channelTitle = '',
+    videoId = '',
+    publishedDate = '',
+    keyword = '',
+}) {
     publishedDate = publishedDate.split('T')[0];
     return (
         <Link to={`/player/${keyword}/${videoId}`} style={{ display: 'inline-block', width: '100%' }}>
@@ -57,7 +63,7 @@ function BigThumbnail({ imageURL = '', title = '', description = '', videoId = '
                 <ThumbnailTitle>
                     <p>{`發布日期：${formatter.formatDate(publishedDate)}`}</p>
                     <h3>{title}</h3>
-                    <h4>{description}</h4>
+                    <h4>{channelTitle}</h4>
                 </ThumbnailTitle>
             </StyledContainer>
         </Link>

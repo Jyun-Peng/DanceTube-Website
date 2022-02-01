@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import DefaultLayout from '../layout/DefaultLayout';
-import { searchVideo } from '../functional/SearchVideo';
+import { searchVideoList } from '../functional/GetData';
 import BigThumbnail from '../components/BigThumbnail';
 
 import heroLockingImg from '../images/Hero/Hero_locking.jpg';
@@ -59,7 +59,7 @@ function Style() {
     const [videoList, setVideoList] = useState([]);
     let { keyword } = useParams();
 
-    useEffect(() => searchVideo(keyword, null, setVideoList), []);
+    useEffect(() => searchVideoList(keyword, null, setVideoList), []);
 
     return (
         <DefaultLayout>
@@ -72,9 +72,10 @@ function Style() {
                     <BigThumbnail
                         imageURL={video.snippet.thumbnails.high.url}
                         title={video.snippet.title}
-                        description={video.snippet.description}
+                        channelTitle={video.snippet.channelTitle}
                         videoId={video.id.videoId}
                         publishedDate={video.snippet.publishedAt}
+                        keyword={keyword}
                     />
                 ))}
             </VerticalFlexBox>

@@ -1,6 +1,7 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import formatter from '../functional/formatter';
 
 const StyledImage = styled.img`
     width: 100%;
@@ -11,8 +12,6 @@ const StyledImage = styled.img`
 `;
 
 const StyledContainer = styled.div`
-    width: 22rem;
-    flex: 1 0 auto;
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
@@ -38,14 +37,14 @@ const ThumbnailTitle = styled.div`
     }
 `;
 
-function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '' }) {
+function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '', keyword = '' }) {
     publishedDate = publishedDate.split('T')[0];
     return (
-        <Link to={`/player/${videoId}`} style={{ display: 'inline-block' }}>
+        <Link to={`/player/${keyword}/${videoId}`} style={{ width: '100%' }}>
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
-                    <p>{`發布日期：${publishedDate}`}</p>
+                    <p>{`發布日期：${formatter.formatDate(publishedDate)}`}</p>
                     <h3>{title}</h3>
                 </ThumbnailTitle>
             </StyledContainer>

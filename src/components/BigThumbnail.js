@@ -1,6 +1,7 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import formatter from '../functional/formatter';
 
 const StyledImage = styled.img`
     width: 40%;
@@ -16,7 +17,7 @@ const StyledContainer = styled.div`
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
 
-    background-color: #545454;
+    background-color: var(--gray-bg);
 `;
 
 const ThumbnailTitle = styled.div`
@@ -27,7 +28,7 @@ const ThumbnailTitle = styled.div`
         font-size: 1.1rem;
         font-weight: 600;
         line-height: 1.2;
-        color: #fefefe;
+        color: var(--white);
         overflow: hidden;
         margin-bottom: 0.5rem;
     }
@@ -36,25 +37,25 @@ const ThumbnailTitle = styled.div`
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.2;
-        color: rgba(225, 225, 225, 0.8);
+        color: var(--gray-text);
         overflow: hidden;
     }
 
     & > p {
         font-size: 0.9rem;
-        color: rgba(225, 225, 225, 0.8);
+        color: var(--gray-text);
         margin-bottom: 0.75rem;
     }
 `;
 
-function BigThumbnail({ imageURL = '', title = '', description = '', videoId = '', publishedDate = '' }) {
+function BigThumbnail({ imageURL = '', title = '', description = '', videoId = '', publishedDate = '', keyword = '' }) {
     publishedDate = publishedDate.split('T')[0];
     return (
-        <Link to={`/player/${videoId}`} style={{ display: 'inline-block', width: '100%' }}>
+        <Link to={`/player/${keyword}/${videoId}`} style={{ display: 'inline-block', width: '100%' }}>
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
-                    <p>{`發布日期：${publishedDate}`}</p>
+                    <p>{`發布日期：${formatter.formatDate(publishedDate)}`}</p>
                     <h3>{title}</h3>
                     <h4>{description}</h4>
                 </ThumbnailTitle>

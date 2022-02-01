@@ -1,7 +1,6 @@
 import react from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { searchVideo } from '../functional/SearchVideo';
 import DefaultContainer from '../layout/DefaultContainer';
 
 const StyledHeader = styled.header`

@@ -15,11 +15,11 @@ const StyledContainer = styled.div`
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--gray-bg);
 `;
 
 const ThumbnailTitle = styled.div`
     padding: 1rem;
-    background-color: #545454;
 
     & > h3 {
         height: 2.4rem;
@@ -38,7 +38,6 @@ const ThumbnailTitle = styled.div`
 `;
 
 function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '', keyword = '' }) {
-    publishedDate = publishedDate.split('T')[0];
     return (
         <Link to={`/player/${keyword}/${videoId}`} style={{ width: '100%' }}>
             <StyledContainer>

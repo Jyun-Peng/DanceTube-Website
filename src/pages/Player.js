@@ -55,10 +55,10 @@ function EmbeddedVideo({ videoId }) {
 function Player() {
     const [videoList, setVideoList] = useState([]);
     const [video, setVideo] = useState(null);
-    let { keyword, videoId } = useParams();
+    let { style, videoId } = useParams();
 
     useEffect(() => {
-        searchVideoList(keyword, null, setVideoList);
+        searchVideoList(style, null, setVideoList);
     }, []);
 
     useEffect(() => {
@@ -90,7 +90,7 @@ function Player() {
                         description={video.snippet.description}
                         videoId={video.id.videoId}
                         publishedDate={video.snippet.publishedAt}
-                        keyword={keyword}
+                        keyword={style}
                     />
                 ))}
             </VerticalFlexBox>

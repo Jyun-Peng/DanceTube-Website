@@ -26,7 +26,7 @@ function Section({ title }) {
             <DefaultContainer>
                 <div className="flex justify-between items-center py-2 mb-4">
                     <h3 className="text-xl text-white font-bold">{title}</h3>
-                    <Button text="more" keyword={title.toLowerCase()} />
+                    <Button text="more" url={`style/${keyword}`} />
                 </div>
 
                 <FlexBox className="overflow-x-scroll">

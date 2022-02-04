@@ -1,10 +1,23 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-function Button({ text, keyword }) {
+const StyledButton = styled.button`
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(${(props) => (props.bgColor ? props.bgColor : '--purple')});
+
+    line-height: 1;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.8125rem;
+`;
+function Button({ text, url, handleClick, bgColor }) {
     return (
-        <Link to={`/style/${keyword}`}>
-            <button className="text-sm bg-main px-3 py-1.5 rounded-full font-bold text-white">{text}</button>
+        <Link to={url ? url : '#'}>
+            <StyledButton onClick={() => handleClick()} bgColor={bgColor}>
+                {text}
+            </StyledButton>
         </Link>
     );
 }

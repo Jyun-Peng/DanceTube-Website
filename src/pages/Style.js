@@ -57,14 +57,14 @@ const VerticalFlexBox = styled.div`
 `;
 function Style() {
     const [videoList, setVideoList] = useState([]);
-    let { keyword } = useParams();
+    let { style } = useParams();
 
-    useEffect(() => searchVideoList(keyword, null, setVideoList), []);
+    useEffect(() => searchVideoList(style, null, setVideoList), [style]);
 
     return (
-        <DefaultLayout>
-            <StyledHero heroStyle={keyword.toLowerCase()}>
-                <StyledTitle>{keyword[0].toUpperCase() + keyword.slice(1)}</StyledTitle>
+        <DefaultLayout dropdown>
+            <StyledHero heroStyle={style.toLowerCase()}>
+                <StyledTitle>{style[0].toUpperCase() + style.slice(1)}</StyledTitle>
             </StyledHero>
             <StyledIntro>This is an brief introduction of the style .</StyledIntro>
             <VerticalFlexBox>
@@ -75,7 +75,7 @@ function Style() {
                         channelTitle={video.snippet.channelTitle}
                         videoId={video.id.videoId}
                         publishedDate={video.snippet.publishedAt}
-                        keyword={keyword}
+                        keyword={style}
                     />
                 ))}
             </VerticalFlexBox>

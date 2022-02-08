@@ -43,6 +43,7 @@ function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = ''
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
+                    <p>{formatter.formatDate(publishedDate)}</p>
                     <h3>{title}</h3>
                 </ThumbnailTitle>
             </StyledContainer>

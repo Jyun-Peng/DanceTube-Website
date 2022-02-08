@@ -11,7 +11,7 @@ function App() {
         <div className="App">
             <Routes>
                 <Route path="/player/:style/:videoId" element={<Player />} />
-                <Route path="/style/:style" element={<Style />} />
+                <Route path="/style/:style/:year" element={<Style />} />
                 <Route path="/" element={<Home />} />
             </Routes>
         </div>

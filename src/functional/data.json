@@ -1,0 +1,611 @@
+{
+    "locking": {
+        "kind": "youtube#searchListResponse",
+        "etag": "IA-6WMmoZ2aKaarfaglBGsy9jXw",
+        "nextPageToken": "CAUQAA",
+        "regionCode": "TW",
+        "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+        },
+        "items": [
+            {
+                "kind": "youtube#searchResult",
+                "etag": "vbAWOrH31QvfRC_K9Nr7hud1BDg",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "v6RWcohKeJg"
+                },
+                "snippet": {
+                    "publishedAt": "2020-12-27T04:09:06Z",
+                    "channelId": "UCdzMtyEM1mEF2oA_PG9g-vA",
+                    "title": "Locking Final 1 台灣大學 vs 逢甲大學｜201219 冰鎮Myturn College High Vol.16 STAGE3",
+                    "description": "Maybe the biggest college dance competition in the world. Proudly presented by Team SKIP 台灣最指標的大專街舞賽事。",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/v6RWcohKeJg/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/v6RWcohKeJg/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/v6RWcohKeJg/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "TeamSKIPtv",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2020-12-27T04:09:06Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "c_-qlx0yhBmBotl_e5VmA2t5F5A",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "AifQ64khhY4"
+                },
+                "snippet": {
+                    "publishedAt": "2015-03-09T05:06:10Z",
+                    "channelId": "UCBlInd4cuySOHnqOYvhk7tw",
+                    "title": "Locking Performance Showcase / Hilty &amp; Bosch Choreography / 310XT Films / URBAN DANCE CAMP",
+                    "description": "WB: http://www.theUrbanDanceCamp.com • IG: http://instagram.com/Urban.Dance.Camp • FB: ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/AifQ64khhY4/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/AifQ64khhY4/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/AifQ64khhY4/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "URBAN DANCE CAMP",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2015-03-09T05:06:10Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "g4YKdGbGaS91g8jYv0YGZUowVCA",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "Ue7OJEWur5M"
+                },
+                "snippet": {
+                    "publishedAt": "2016-12-28T16:30:00Z",
+                    "channelId": "UCU7fH2nrs8HNAfWBp9iQASA",
+                    "title": "【快樂來運動】Locking基礎教學 (小允老師)",
+                    "description": "【訂閱民視綜藝官方頻道Subscribe FTVENTERTAINMENT 】: https://goo.gl/mWhwK7 本期精彩: 在老師的教導下， 扎實的運用下盤 ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "民視綜藝娛樂 Formosa TV Entertainments",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2016-12-28T16:30:00Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "vMFR86_ws1IqeAKQv3AjqQKf8M8",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "cIyKo9giZLw"
+                },
+                "snippet": {
+                    "publishedAt": "2015-08-12T11:32:44Z",
+                    "channelId": "UCsTeCS6s9YoNn2kbQVAgDsQ",
+                    "title": "星級街舞教室(十二)：Locking (一)",
+                    "description": "http://www.eastweek.com.hk/?aid=44860 不少人都以為街舞舞種之一的Locking非常難學懂，不過星級導師楊樂文(Lokman)就表示 ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/cIyKo9giZLw/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/cIyKo9giZLw/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/cIyKo9giZLw/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "東周網 Eastweek.com.hk【東周刊官方網站】",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2015-08-12T11:32:44Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "ca-PgA0yGjxYPCpCDMH7w4OomY0",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "Q5sOdFBBtEc"
+                },
+                "snippet": {
+                    "publishedAt": "2021-12-30T16:00:12Z",
+                    "channelId": "UCdzMtyEM1mEF2oA_PG9g-vA",
+                    "title": "Locking Final 文化大學 vs 台灣大學｜211218 College High Vol.17 全國制霸 大學街舞高峰會  STAGE3",
+                    "description": "2021 College High vol.17 全國制霸大學街舞高峰會COLLEGE HIGH 全國制霸since 2009 The best college dance competition ever.",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/Q5sOdFBBtEc/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/Q5sOdFBBtEc/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/Q5sOdFBBtEc/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "TeamSKIPtv",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2021-12-30T16:00:12Z"
+                }
+            }
+        ]
+    },
+    "popping": {
+        "kind": "youtube#searchListResponse",
+        "etag": "L2ksucyNNTKgrrA_0Wz-8lhI4RM",
+        "nextPageToken": "CAUQAA",
+        "regionCode": "TW",
+        "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+        },
+        "items": [
+            {
+                "kind": "youtube#searchResult",
+                "etag": "4LMAjlkt2HPnKs66ArpvBzCJJkA",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "2EAgLok_SYc"
+                },
+                "snippet": {
+                    "publishedAt": "2020-12-17T09:46:42Z",
+                    "channelId": "UC9jP4KNbpHy79fs3WbgMhlw",
+                    "title": "【五分鐘學跳舞】POPPING基礎震點教學(手部震點)🔥 小霖老師超入門舞蹈教學！第一集",
+                    "description": "哇！是建國中學制服耶！哇！這一集教POPPING耶！ POPPING的震點要做得好看真的非常不容易，必須下很多苦工，但是學會了震點 ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/2EAgLok_SYc/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/2EAgLok_SYc/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/2EAgLok_SYc/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "全民來跳舞",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2020-12-17T09:46:42Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "0GLh0v1bDr0cwi0lfgchIuBmcrY",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "upvEOZn4p6g"
+                },
+                "snippet": {
+                    "publishedAt": "2019-01-05T16:10:48Z",
+                    "channelId": "UCdzMtyEM1mEF2oA_PG9g-vA",
+                    "title": "Popping Final Battle：政治大學 vs 台灣大學｜181223 College High vol.14 Stage3",
+                    "description": "COLLEGE HIGH 全國制霸The best college dance competition ever. Proudly presented by Team SKIP Official Website: ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/upvEOZn4p6g/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/upvEOZn4p6g/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/upvEOZn4p6g/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "TeamSKIPtv",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2019-01-05T16:10:48Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "mHjfyvbk-mKfBYEyiYyg6UThawE",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "fHeneea0qGk"
+                },
+                "snippet": {
+                    "publishedAt": "2019-09-07T16:16:42Z",
+                    "channelId": "UCFq4zHjlVAle-fzJoL5lDPQ",
+                    "title": "Blondy vs Jaja TOP 24 Popping Forever - Summer Dance Forever 2019",
+                    "description": "POPPING FOREVER 22 August 2019 DANCERS: Blondy (win) vs Jaja (Yaya) JUDGES: Kite, Nelson, Gucchon, Monsta Pop, ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/fHeneea0qGk/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/fHeneea0qGk/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/fHeneea0qGk/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "Summer Dance Forever",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2019-09-07T16:16:42Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "58Z5i_GmulhGqMvgrfx4Gcbxm8o",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "BkfDjRwBaaQ"
+                },
+                "snippet": {
+                    "publishedAt": "2017-10-13T20:36:59Z",
+                    "channelId": "UCKrOk6z473TunIzyYw0CUQw",
+                    "title": "Poppin John | FrontRow | World of Dance 2017 | #WODATL17",
+                    "description": "Get my new Popping Dance Masterclass & get 1 on 1 training from me: https://learn.poppinjohn.com/sales-page1620168303740 ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/BkfDjRwBaaQ/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/BkfDjRwBaaQ/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/BkfDjRwBaaQ/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "Poppin John SBK",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2017-10-13T20:36:59Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "SFm-YpWbHnW-GvgbOy7Pjin4FK0",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "WxUlGm29LDI"
+                },
+                "snippet": {
+                    "publishedAt": "2021-08-09T09:01:03Z",
+                    "channelId": "UCgdj5bL5_Il2tqsQ7J4k6zw",
+                    "title": "(MV)온앤오프 (ONF)_여름 쏙 (Popping)",
+                    "description": "SUB)ONF SUMMER POPUP ALBUM [POPPING] has been released. :: ALBUM Smart Link: https://smek.lnk.to/ONF_POPPING ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/WxUlGm29LDI/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/WxUlGm29LDI/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/WxUlGm29LDI/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "ONF OFFICIAL",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2021-08-09T09:01:03Z"
+                }
+            }
+        ]
+    },
+    "waacking": {
+        "kind": "youtube#searchListResponse",
+        "etag": "IPiAfkrk6ZKNhgE_Lb__86d01bw",
+        "nextPageToken": "CAUQAA",
+        "regionCode": "TW",
+        "pageInfo": {
+            "totalResults": 793449,
+            "resultsPerPage": 5
+        },
+        "items": [
+            {
+                "kind": "youtube#searchResult",
+                "etag": "8VkzcwyPrErwv_AVmn0abt4rVxo",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "tCDqCnOqOas"
+                },
+                "snippet": {
+                    "publishedAt": "2018-08-22T07:42:51Z",
+                    "channelId": "UCgiz3Pm3FBhDyy3g_fP5OVA",
+                    "title": "Lip J - WAACKING showcase at KOD // .stance",
+                    "description": "Lip J from Korea waacking judges showcase from KOD World Finals in Changsha, China.",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/tCDqCnOqOas/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/tCDqCnOqOas/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/tCDqCnOqOas/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "stance",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2018-08-22T07:42:51Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "yJgYgwm-q0V55fTK4oXRGN4bcIs",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "H162Ls8B-1w"
+                },
+                "snippet": {
+                    "publishedAt": "2021-11-16T16:30:12Z",
+                    "channelId": "UCdzMtyEM1mEF2oA_PG9g-vA",
+                    "title": "Waacking Team FINAL 台北市大 UT爆氣 QUEEN vs 台灣大學 NTU WAACKERS｜211030 H Vol.17 全國制霸 大學街舞高峰會  STAGE1",
+                    "description": "2021 College High vol.17 全國制霸大學街舞高峰會COLLEGE HIGH 全國制霸since 2009 The best college dance competition ever.",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/H162Ls8B-1w/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/H162Ls8B-1w/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/H162Ls8B-1w/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "TeamSKIPtv",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2021-11-16T16:30:12Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "0vRMZ5EzQWZMsbg8A3xVj-Gh8t8",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "stOD2qJ1-co"
+                },
+                "snippet": {
+                    "publishedAt": "2020-02-12T06:56:11Z",
+                    "channelId": "UCMMGBbbRXxa8hYXUYb2PaSw",
+                    "title": "Waacking Basic Techniques | Waacking基础教学第二期",
+                    "description": "Here is our second waacking basic techniques training. This training mainly focuses on roll, scan, and windmill arms. It's great for ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/stOD2qJ1-co/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/stOD2qJ1-co/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/stOD2qJ1-co/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "D.D.dancingdiary",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2020-02-12T06:56:11Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "PELnMLum2VADXD_BPKsCh1xfftQ",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "w56YYVQOfPY"
+                },
+                "snippet": {
+                    "publishedAt": "2013-03-22T01:12:13Z",
+                    "channelId": "UC9O1RXiNLHAzwF-DBr_ZYiQ",
+                    "title": "PRINCESS MADOKI (FRA) vs YOSHIE (JPN) Waacking Semifinal I STREETSTAR 2013",
+                    "description": "Like STREETSTAR Facebook https://www.facebook.com/StreetStar.UrbanArts Follow STREETSTAR on Instagram: ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/w56YYVQOfPY/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/w56YYVQOfPY/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/w56YYVQOfPY/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "streetstar",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2013-03-22T01:12:13Z"
+                }
+            },
+            {
+                "kind": "youtube#searchResult",
+                "etag": "Encbj9Kk0dxkU9XpXzJh78AYo6A",
+                "id": {
+                    "kind": "youtube#video",
+                    "videoId": "kpTlrw6RJTY"
+                },
+                "snippet": {
+                    "publishedAt": "2022-01-26T10:21:54Z",
+                    "channelId": "UC_9VndUJ6Z6yfEK4_EJI46Q",
+                    "title": "2022 HOLIDAY IN WAACK _ 16ROUND | MARID(W) VS PEANUT",
+                    "description": "waacking #battle #holidayinwaack 2022 HOLIDAY IN WAACKING VOL.12 1VS1 WAACKING BATTLE & GUEST SHOWCASE ...",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/kpTlrw6RJTY/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/kpTlrw6RJTY/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/kpTlrw6RJTY/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "얼플",
+                    "liveBroadcastContent": "none",
+                    "publishTime": "2022-01-26T10:21:54Z"
+                }
+            }
+        ]
+    },
+    "singleVideo": {
+        "kind": "youtube#videoListResponse",
+        "etag": "aKC0skQcz4d4IA0dNQ04csfFhQE",
+        "items": [
+            {
+                "kind": "youtube#video",
+                "etag": "WfgjCtqxSN2Zoi7UBlktxX3gVG4",
+                "id": "Ue7OJEWur5M",
+                "snippet": {
+                    "publishedAt": "2016-12-28T16:30:00Z",
+                    "channelId": "UCU7fH2nrs8HNAfWBp9iQASA",
+                    "title": "【快樂來運動】Locking基礎教學 (小允老師)",
+                    "description": "【訂閱民視綜藝官方頻道 Subscribe FTVENTERTAINMENT 】: https://goo.gl/mWhwK7\n\n本期精彩:\n在老師的教導下，\n扎實的運用下盤力量學會Locking基本動作，\n每個舞蹈動作都有個故事，\n孩子們邊聽故事編學舞，增加對舞蹈的記憶力。\n\n■□【四季線上影視】隨時收看、免費綜藝 VOD ■□\n\n王牌雙響炮→https://www.4gtv.tv/vod/show/\n台灣那麼旺→https://goo.gl/4a4WTW\n舞力全開→https://goo.gl/jygGI1\n綜藝大集合 →https://goo.gl/5F81Wl\n\n■□ 更多精彩官方影片，請關注我們 ■□\n\n民視Watch熊Facebook: https://www.facebook.com/MinShiftv\n民視娛樂Facebook: https://goo.gl/EFflxq\n\n■□ 其他民視娛樂精彩節目【官方HD】■□\n\n《綜藝大集合》官方版 全集: https://goo.gl/cnsEFM\n《舞力全開》官方版 全集: https://goo.gl/PZQSqF\n《Go Go Taiwan 玩台灣》官方版 全集: https://goo.gl/sevfZg\n《 Go Go 捷運》 官方版 全集: https://goo.gl/jrgqYM\n《美鳳有約》官方版 全集: https://goo.gl/8hVARH\n《用點心做點心》官方版 全集: https://goo.gl/uzRuym\n《快樂來運動》官方版 全集:https://goo.gl/ZZU9Rm",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        },
+                        "standard": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/sddefault.jpg",
+                            "width": 640,
+                            "height": 480
+                        },
+                        "maxres": {
+                            "url": "https://i.ytimg.com/vi/Ue7OJEWur5M/maxresdefault.jpg",
+                            "width": 1280,
+                            "height": 720
+                        }
+                    },
+                    "channelTitle": "民視綜藝娛樂 Formosa TV Entertainments",
+                    "tags": ["快樂來運動", "民視", "陳謙文", "郭汶欣", "舞蹈教學", "街舞", "Ep139", "小允", "Locking"],
+                    "categoryId": "24",
+                    "liveBroadcastContent": "none",
+                    "localized": {
+                        "title": "【快樂來運動】Locking基礎教學 (小允老師)",
+                        "description": "【訂閱民視綜藝官方頻道 Subscribe FTVENTERTAINMENT 】: https://goo.gl/mWhwK7\n\n本期精彩:\n在老師的教導下，\n扎實的運用下盤力量學會Locking基本動作，\n每個舞蹈動作都有個故事，\n孩子們邊聽故事編學舞，增加對舞蹈的記憶力。\n\n■□【四季線上影視】隨時收看、免費綜藝 VOD ■□\n\n王牌雙響炮→https://www.4gtv.tv/vod/show/\n台灣那麼旺→https://goo.gl/4a4WTW\n舞力全開→https://goo.gl/jygGI1\n綜藝大集合 →https://goo.gl/5F81Wl\n\n■□ 更多精彩官方影片，請關注我們 ■□\n\n民視Watch熊Facebook: https://www.facebook.com/MinShiftv\n民視娛樂Facebook: https://goo.gl/EFflxq\n\n■□ 其他民視娛樂精彩節目【官方HD】■□\n\n《綜藝大集合》官方版 全集: https://goo.gl/cnsEFM\n《舞力全開》官方版 全集: https://goo.gl/PZQSqF\n《Go Go Taiwan 玩台灣》官方版 全集: https://goo.gl/sevfZg\n《 Go Go 捷運》 官方版 全集: https://goo.gl/jrgqYM\n《美鳳有約》官方版 全集: https://goo.gl/8hVARH\n《用點心做點心》官方版 全集: https://goo.gl/uzRuym\n《快樂來運動》官方版 全集:https://goo.gl/ZZU9Rm"
+                    },
+                    "defaultAudioLanguage": "zh-TW"
+                },
+                "statistics": {
+                    "viewCount": "111380",
+                    "likeCount": "1166",
+                    "favoriteCount": "0",
+                    "commentCount": "37"
+                }
+            }
+        ],
+        "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+        }
+    }
+}

@@ -24,27 +24,29 @@ async function searchVideoList(keyword, time = null, setState) {
     //     });
 
     //test
+    console.log('Start searching!');
     setState(data[keyword].items);
 }
 
 async function getVideo(videoId, setState) {
     const URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=${videoId}&key=${apiKey}`;
-    fetch(URL)
-        .then((response) => {
-            // if (response.ok) return response.json();
-            throw new Error('Something went wrong');
-        })
-        .then((data) => {
-            console.log(data);
-            setState(data.items[0]);
-        })
-        .catch((error) => {
-            // If fails, set default video
-            setState(data.singleVideo.items[0]);
-            console.log(error);
-        });
+    // fetch(URL)
+    //     .then((response) => {
+    //         // if (response.ok) return response.json();
+    //         throw new Error('Something went wrong');
+    //     })
+    //     .then((data) => {
+    //         console.log(data);
+    //         setState(data.items[0]);
+    //     })
+    //     .catch((error) => {
+    //         // If fails, set default video
+    //         setState(data.singleVideo.items[0]);
+    //         console.log(error);
+    //     });
 
-    // setState(data.singleVideo.items[0]);
+    console.log('Start searching!');
+    setState(data.singleVideo.items[0]);
 }
 
 export { searchVideoList, getVideo };

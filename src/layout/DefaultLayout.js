@@ -1,6 +1,6 @@
-import react from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
+import DefaultContainer from './DefaultContainer';
 
 const StyledWrapper = styled.div`
     background-color: var(--black);
@@ -9,11 +9,16 @@ const StyledWrapper = styled.div`
     min-height: 100vh;
 `;
 
+const StyledChildrenContainer = styled(DefaultContainer)`
+    padding-top: 2.75rem;
+    padding-bottom: 4rem;
+`;
+
 function DefaultLayout({ children, dropdown }) {
     return (
         <StyledWrapper>
             <NavBar dropdown={dropdown} />
-            <div className="max-w-4xl mx-auto pt-[2.5rem] pb-[4.25rem]">{children}</div>
+            <StyledChildrenContainer>{children}</StyledChildrenContainer>
         </StyledWrapper>
     );
 }

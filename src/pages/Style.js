@@ -57,9 +57,9 @@ const VerticalFlexBox = styled.div`
 `;
 function Style() {
     const [videoList, setVideoList] = useState([]);
-    let { style } = useParams();
+    let { style, year } = useParams();
 
-    useEffect(() => searchVideoList(style, null, setVideoList), [style]);
+    useEffect(() => searchVideoList(style, year, setVideoList), [style, year]);
 
     return (
         <DefaultLayout dropdown>

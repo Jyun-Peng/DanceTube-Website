@@ -82,11 +82,11 @@ function Dropdown({ currentText, list }) {
     );
 }
 function NavBar({ dropdown }) {
-    let { style } = useParams();
+    let { style, year } = useParams();
     const styleList = [
-        { text: 'Locking', url: '/style/locking' },
-        { text: 'popping', url: '/style/popping' },
-        { text: 'waacking', url: '/style/waacking' },
+        { text: 'Locking', url: `/style/locking/${year}` },
+        { text: 'popping', url: `/style/popping/${year}` },
+        { text: 'waacking', url: `/style/waacking/${year}` },
     ];
 
     return (

@@ -5,13 +5,13 @@ import formatter from '../functional/formatter';
 
 const StyledImage = styled.img`
     width: 100%;
-    height: 12rem;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    object-fit: center;
     filter: saturate(80%);
 `;
 
 const StyledContainer = styled.div`
+    width: 100%;
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
@@ -43,7 +43,6 @@ function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = ''
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
-                    <p>{`發布日期：${formatter.formatDate(publishedDate)}`}</p>
                     <h3>{title}</h3>
                 </ThumbnailTitle>
             </StyledContainer>

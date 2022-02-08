@@ -1,9 +1,6 @@
-import react, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import DefaultLayout from '../layout/DefaultLayout';
-
-import DefaultContainer from '../layout/DefaultContainer';
-import Carousel from '../components/Carousel';
 import Thumbnail from '../components/Thumbnail';
 import Button from '../components/Button';
 import { searchVideoList } from '../functional/GetData';
@@ -11,7 +8,21 @@ import FlexBox from '../layout/FlexBox';
 
 const ThumbnailContainer = styled.div`
     flex-shrink: 0;
-    width: 22rem;
+    width: calc(33.33333% - 0.33333rem);
+
+    @media (max-width: 768px) {
+        width: calc(50% - 0.25rem);
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100%);
+    }
+`;
+
+const StyledFlexBox = styled(FlexBox)`
+    overflow-x: overlay;
+    padding-bottom: 1rem;
+    width: 100%;
 `;
 
 function Section({ title }) {
@@ -23,26 +34,24 @@ function Section({ title }) {
 
     return (
         <div className="pt-4">
-            <DefaultContainer>
-                <div className="flex justify-between items-center py-2 mb-4">
-                    <h3 className="text-xl text-white font-bold">{title}</h3>
-                    <Button text="more" url={`style/${keyword}`} />
-                </div>
+            <div className="flex justify-between items-center py-2 mb-4">
+                <h3 className="text-xl text-white font-bold">{title}</h3>
+                <Button text="more" url={`/style/${keyword}`} />
+            </div>
 
-                <FlexBox className="overflow-x-scroll">
-                    {videoList.map((video) => (
-                        <ThumbnailContainer>
-                            <Thumbnail
-                                imageURL={video.snippet.thumbnails.high.url}
-                                title={video.snippet.title}
-                                videoId={video.id.videoId}
-                                publishedDate={video.snippet.publishedAt}
-                                keyword={keyword}
-                            />
-                        </ThumbnailContainer>
-                    ))}
-                </FlexBox>
-            </DefaultContainer>
+            <StyledFlexBox gap="0.5rem">
+                {videoList.map((video) => (
+                    <ThumbnailContainer>
+                        <Thumbnail
+                            imageURL={video.snippet.thumbnails.high.url}
+                            title={video.snippet.title}
+                            videoId={video.id.videoId}
+                            publishedDate={video.snippet.publishedAt}
+                            keyword={keyword}
+                        />
+                    </ThumbnailContainer>
+                ))}
+            </StyledFlexBox>
         </div>
     );
 }

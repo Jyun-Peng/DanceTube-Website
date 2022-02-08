@@ -24,11 +24,12 @@ const DescriptionSection = styled.div`
     }
 `;
 
+const StyledIframe = styled.iframe`
+    width: 100%;
+    height: 60vh;
+`;
+
 function EmbeddedVideo({ videoId }) {
-    const StyledIframe = styled.iframe`
-        width: 100%;
-        height: 60vh;
-    `;
     return (
         <StyledIframe
             src={`https://www.youtube.com/embed/${videoId}`}

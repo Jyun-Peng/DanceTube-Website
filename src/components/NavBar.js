@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { Link, useParams } from 'react-router-dom';
 import DefaultContainer from '../layout/DefaultContainer';
 import FlexBox from '../layout/FlexBox';
-import Button from './Button';
-import arrow from '../images/Logo/arrow-down.svg';
+import Dropdown from './Dropdown';
 
 const StyledHeader = styled.header`
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
@@ -22,72 +21,45 @@ const StyledLogo = styled.h3`
     font-weight: 600;
 `;
 
-function Dropdown({ currentText, list }) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleClick = function () {
-        setIsOpen(!isOpen);
-    };
-
-    const ListContainer = styled.div`
-        position: absolute;
-        top: 2.25rem;
-        right: 0;
-        background-color: var(--white);
-        border-radius: 0.25rem;
-        overflow: hidden;
-
-        & li > a {
-            display: block;
-            width: 100%;
-            padding: 0.5rem 1.25rem 0.5rem 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-
-            &:hover {
-                background-color: var(--gray-text);
-            }
-        }
-    `;
-
-    const ArrowSvg = styled.img`
-        width: 1rem;
-        transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
-    `;
-
-    return (
-        <div>
-            <Button
-                text={
-                    <FlexBox gap="0.5rem">
-                        <span>{currentText}</span>
-                        <ArrowSvg src={arrow} isOpen={isOpen} />
-                    </FlexBox>
-                }
-                handleClick={handleClick}
-                bgColor={'--gray-bg'}
-            />
-            {isOpen && (
-                <ListContainer onClick={() => setIsOpen(!isOpen)}>
-                    <ul>
-                        {list.map((ele) => (
-                            <li>
-                                <Link to={ele.url}>{ele.text}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </ListContainer>
-            )}
-        </div>
-    );
-}
-function NavBar({ dropdown }) {
+function DropdownGroup() {
+    const [dropdownState, setDropdownState] = useState({ 0: false, 1: false });
     let { style, year } = useParams();
+
     const styleList = [
         { text: 'Locking', url: `/style/locking/${year}` },
         { text: 'popping', url: `/style/popping/${year}` },
         { text: 'waacking', url: `/style/waacking/${year}` },
     ];
+    const yearList = [
+        { text: '2022', url: `/style/${style}/2022` },
+        { text: '2021', url: `/style/${style}/2021` },
+        { text: '2020', url: `/style/${style}/2020` },
+        { text: '2019', url: `/style/${style}/2019` },
+    ];
+
+    const handleOpen = function (id) {
+        let newDropdownState = { 0: false, 1: false };
+        console.log(dropdownState);
+        setDropdownState({ ...newDropdownState, [id]: !dropdownState[id] });
+        newDropdownState = null;
+    };
+
+    return (
+        <FlexBox gap={'0.5rem'}>
+            <Dropdown
+                id={0}
+                state={dropdownState[0]}
+                currentText={style[0].toUpperCase() + style.slice(1)}
+                list={styleList}
+                handleClick={handleOpen}
+            />
+            <Dropdown id={1} state={dropdownState[1]} currentText={year} list={yearList} handleClick={handleOpen} />
+        </FlexBox>
+    );
+}
+
+function NavBar({ dropdown }) {
+    let { style, year } = useParams();
 
     return (
         <StyledHeader>
@@ -97,11 +69,7 @@ function NavBar({ dropdown }) {
                         <StyledLogo>DanceTube</StyledLogo>
                     </Link>
 
-                    <div className="flex">
-                        {dropdown && (
-                            <Dropdown currentText={style[0].toUpperCase() + style.slice(1)} list={styleList} />
-                        )}
-                    </div>
+                    {dropdown && <DropdownGroup />}
                 </FlexBox>
             </DefaultContainer>
         </StyledHeader>

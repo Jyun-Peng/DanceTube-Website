@@ -55,6 +55,10 @@ const VerticalFlexBox = styled.div`
 
     gap: 1rem;
 `;
+
+const BigThumbnailContainer = styled.div`
+    width: 100%;
+`;
 function Style() {
     const [videoList, setVideoList] = useState([]);
     let { style, year } = useParams();
@@ -68,15 +72,18 @@ function Style() {
             </StyledHero>
             <StyledIntro>This is an brief introduction of the style .</StyledIntro>
             <VerticalFlexBox>
-                {videoList.map((video) => (
-                    <BigThumbnail
-                        imageURL={video.snippet.thumbnails.high.url}
-                        title={video.snippet.title}
-                        channelTitle={video.snippet.channelTitle}
-                        videoId={video.id.videoId}
-                        publishedDate={video.snippet.publishedAt}
-                        keyword={style}
-                    />
+                {videoList.map((video, index) => (
+                    <BigThumbnailContainer key={index}>
+                        <BigThumbnail
+                            index={index}
+                            imageURL={video.snippet.thumbnails.high.url}
+                            title={video.snippet.title}
+                            channelTitle={video.snippet.channelTitle}
+                            videoId={video.id.videoId}
+                            publishedDate={video.snippet.publishedAt}
+                            keyword={style}
+                        />
+                    </BigThumbnailContainer>
                 ))}
             </VerticalFlexBox>
         </DefaultLayout>

@@ -55,7 +55,6 @@ function BigThumbnail({
     publishedDate = '',
     keyword = '',
 }) {
-    publishedDate = publishedDate.split('T')[0];
     return (
         <Link to={`/player/${keyword}/${videoId}`} style={{ display: 'inline-block', width: '100%' }}>
             <StyledContainer>

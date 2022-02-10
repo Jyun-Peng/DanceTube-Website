@@ -15,7 +15,7 @@ const StyledButton = styled.button`
 function Button({ text, url, handleClick, bgColor }) {
     return (
         <Link to={url ? url : '#'}>
-            <StyledButton onClick={() => handleClick()} bgColor={bgColor}>
+            <StyledButton onClick={handleClick} bgColor={bgColor}>
                 {text}
             </StyledButton>
         </Link>

@@ -12,7 +12,7 @@ function Section({ title }) {
     const keyword = title.toLowerCase();
 
     //Fetch youtube video
-    useEffect(() => searchVideoList(keyword, null, setVideoList), []);
+    useEffect(() => searchVideoList(keyword, null, 5, setVideoList), []);
 
     return (
         <div className="pt-4">

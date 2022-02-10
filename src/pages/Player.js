@@ -41,13 +41,8 @@ function EmbeddedVideo({ videoId }) {
     );
 }
 function Player() {
-    const [videoList, setVideoList] = useState([]);
     const [video, setVideo] = useState(null);
-    let { style, videoId } = useParams();
-
-    // useEffect(() => {
-    //     searchVideoList(style, null, setVideoList);
-    // }, []);
+    let { videoId } = useParams();
 
     useEffect(() => {
         getVideo(videoId, setVideo);

@@ -63,7 +63,7 @@ function Style() {
     const [videoList, setVideoList] = useState([]);
     let { style, year } = useParams();
 
-    useEffect(() => searchVideoList(style, year, setVideoList), [style, year]);
+    useEffect(() => searchVideoList(style, year, 20, setVideoList), [style, year]);
 
     return (
         <DefaultLayout dropdown>

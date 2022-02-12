@@ -9,15 +9,14 @@ const StyledImage = styled.img`
     object-fit: cover;
     object-position: center;
     filter: saturate(80%);
+    border-radius: 0.3rem;
 `;
 
 const StyledContainer = styled.div`
     display: flex;
     align-items: flex-start;
     overflow: hidden;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
-
-    background-color: var(--gray-bg);
+    /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
 `;
 
 const ThumbnailTitle = styled.div`

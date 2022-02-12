@@ -6,7 +6,7 @@ import FlexBox from '../layout/FlexBox';
 import Dropdown from './Dropdown';
 
 const StyledHeader = styled.header`
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
     padding: 0.5rem 0;
     position: fixed;
     top: 0;

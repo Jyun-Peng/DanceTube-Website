@@ -31,34 +31,36 @@ const StyledHero = styled.div`
 `;
 
 const StyledTitle = styled.h1`
-    transform: translate(-50%, 50%);
     font-size: 5rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
     letter-spacing: 0.1rem;
+    /* text-align: center; */
+    padding: 3rem 0 3rem 0;
 `;
 
 const StyledIntro = styled.div`
     font-size: 1.6rem;
     font-weight: 600;
     color: rgba(225, 225, 225, 0.8);
-    text-align: center;
-
-    padding-top: 12vh;
-    padding-bottom: 8vh;
+    /* text-align: center; */
+    margin-bottom: 4rem;
 `;
 
 const VerticalFlexBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    gap: 1rem;
+    border-right: 0.15rem solid var(--purple);
 `;
 
 const BigThumbnailContainer = styled.div`
     width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 `;
+
 function Style() {
     const [videoList, setVideoList] = useState([]);
     let { style, year } = useParams();
@@ -67,9 +69,8 @@ function Style() {
 
     return (
         <DefaultLayout dropdown>
-            <StyledHero heroStyle={style.toLowerCase()}>
-                <StyledTitle>{style[0].toUpperCase() + style.slice(1)}</StyledTitle>
-            </StyledHero>
+            {/* <StyledHero heroStyle={style.toLowerCase()} /> */}
+            <StyledTitle>{style[0].toUpperCase() + style.slice(1)}</StyledTitle>
             <StyledIntro>This is an brief introduction of the style .</StyledIntro>
             <VerticalFlexBox>
                 {videoList.map((video, index) => (

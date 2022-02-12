@@ -8,9 +8,9 @@
 }
 :root {
     --white: #fefefe;
-    --black: #333333;
+    --black: #232323;
     --gray-text: rgba(225, 225, 225, 0.8);
-    --gray-bg: #545454;
+    --gray-bg: #333333;
     --purple: #d355ff;
 }
 

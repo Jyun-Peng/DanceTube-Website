@@ -55,7 +55,10 @@ function BigThumbnail({
     keyword = '',
 }) {
     return (
-        <Link to={`/player/${keyword}/${videoId}`} style={{ display: 'inline-block', width: '100%' }}>
+        <Link
+            to={process.env.PUBLIC_URL + `/player/${keyword}/${videoId}`}
+            style={{ display: 'inline-block', width: '100%' }}
+        >
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>

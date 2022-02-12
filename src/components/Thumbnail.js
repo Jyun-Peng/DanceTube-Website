@@ -38,7 +38,7 @@ const ThumbnailTitle = styled.div`
 
 function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '', keyword = '' }) {
     return (
-        <Link to={`/player/${keyword}/${videoId}`} style={{ width: '100%' }}>
+        <Link to={process.env.PUBLIC_URL + `/player/${keyword}/${videoId}`} style={{ width: '100%' }}>
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>

@@ -26,15 +26,15 @@ function DropdownGroup() {
     let { style, year } = useParams();
 
     const styleList = [
-        { text: 'Locking', url: `/style/locking/${year}` },
-        { text: 'popping', url: `/style/popping/${year}` },
-        { text: 'waacking', url: `/style/waacking/${year}` },
+        { text: 'Locking', url: process.env.PUBLIC_URL + `/style/locking/${year}` },
+        { text: 'popping', url: process.env.PUBLIC_URL + `/style/popping/${year}` },
+        { text: 'waacking', url: process.env.PUBLIC_URL + `/style/waacking/${year}` },
     ];
     const yearList = [
-        { text: '2022', url: `/style/${style}/2022` },
-        { text: '2021', url: `/style/${style}/2021` },
-        { text: '2020', url: `/style/${style}/2020` },
-        { text: '2019', url: `/style/${style}/2019` },
+        { text: '2022', url: process.env.PUBLIC_URL + `/style/${style}/2022` },
+        { text: '2021', url: process.env.PUBLIC_URL + `/style/${style}/2021` },
+        { text: '2020', url: process.env.PUBLIC_URL + `/style/${style}/2020` },
+        { text: '2019', url: process.env.PUBLIC_URL + `/style/${style}/2019` },
     ];
 
     const handleOpen = function (id) {
@@ -65,7 +65,7 @@ function NavBar({ dropdown }) {
         <StyledHeader>
             <DefaultContainer>
                 <FlexBox spaceBetween>
-                    <Link to="/">
+                    <Link to={process.env.PUBLIC_URL + '/'}>
                         <StyledLogo>DanceTube</StyledLogo>
                     </Link>
 

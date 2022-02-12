@@ -18,7 +18,7 @@ function Section({ title }) {
         <div className="pt-4">
             <div className="flex justify-between items-center py-2 mb-4">
                 <h3 className="text-xl text-white font-bold">{title}</h3>
-                <Button text="more" url={`/style/${keyword}/2021`} />
+                <Button text="more" url={process.env.PUBLIC_URL + `/style/${keyword}/2021`} />
             </div>
 
             <Carousel

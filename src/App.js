@@ -1,6 +1,4 @@
-import { data } from 'autoprefixer';
-
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Player from './pages/Player';
@@ -10,9 +8,9 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="/player/:style/:videoId" element={<Player />} />
-                <Route path="/style/:style/:year" element={<Style />} />
-                <Route path="/" element={<Home />} />
+                <Route path={process.env.PUBLIC_URL + '/player/:style/:videoId'} element={<Player />} />
+                <Route path={process.env.PUBLIC_URL + '/style/:style/:year'} element={<Style />} />
+                <Route path={process.env.PUBLIC_URL + '/'} element={<Home />} />
             </Routes>
         </div>
     );

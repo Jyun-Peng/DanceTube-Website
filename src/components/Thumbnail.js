@@ -1,4 +1,3 @@
-import react from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import formatter from '../functional/formatter';
@@ -12,10 +11,10 @@ const StyledImage = styled.img`
 
 const StyledContainer = styled.div`
     width: 100%;
-    border-radius: 0.3rem;
+    border-radius: 0.3rem 0.3rem 0 0;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
-    background-color: var(--gray-bg);
+    border-bottom: 0.1rem solid var(--purple);
 `;
 
 const ThumbnailTitle = styled.div`

@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import FlexBox from '../layout/FlexBox';
+import './Carousel.css';
 
 const StyledFlexBox = styled(FlexBox)`
     margin: 0 -0.25rem;
-    transform: translateX(0);
 `;
 
 const ItemContainer = styled.div`
@@ -53,46 +53,46 @@ const CarouselButton = styled.button`
 function Carousel({ itemList }) {
     const [orderList, setOrderList] = useState([]);
     const carouselContent = useRef();
+    const disableFlag = useRef(true);
 
     useEffect(() => {
         setOrderList(itemList.map((v, index) => `${index + 1}`));
-        carouselContent.current.style.transform = `translateX(${-carouselContent.current.scrollWidth / 5}px)`;
     }, [itemList]);
 
     function handleCarouselButtonClick(next) {
+        if (!disableFlag.current) return;
+
         let newOrderList = [];
-        console.log('orderList :');
-        console.log(orderList);
         if (next) {
             newOrderList.push(orderList[orderList.length - 1]);
             for (let i = 0; i < orderList.length - 1; i++) newOrderList.push(orderList[i]);
-            carouselContent.current.style.transition = 'transform 0.3s';
-            carouselContent.current.style.transform = `translateX(${(-2 * carouselContent.current.scrollWidth) / 5}px)`;
+            carouselContent.current.classList.add('slide-next');
+            disableFlag.current = false;
 
             setTimeout(() => {
-                carouselContent.current.style.transition = 'none';
-                carouselContent.current.style.transform = `translateX(${-carouselContent.current.scrollWidth / 5}px)`;
+                carouselContent.current.classList.remove('slide-next');
                 setOrderList(newOrderList);
                 newOrderList = null;
+                disableFlag.current = true;
             }, 300);
         } else {
             for (let i = 1; i < orderList.length; i++) newOrderList.push(orderList[i]);
             newOrderList.push(orderList[0]);
-            carouselContent.current.style.transition = 'transform 0.3s';
-            carouselContent.current.style.transform = `translateX(0px)`;
+            carouselContent.current.classList.add('slide-prev');
+            disableFlag.current = false;
 
             setTimeout(() => {
-                carouselContent.current.style.transition = 'none';
-                carouselContent.current.style.transform = `translateX(${-carouselContent.current.scrollWidth / 5}px)`;
+                carouselContent.current.classList.remove('slide-prev');
                 setOrderList(newOrderList);
                 newOrderList = null;
+                disableFlag.current = true;
             }, 300);
         }
     }
 
     return (
         <CarouselWrapper>
-            <StyledFlexBox ref={carouselContent}>
+            <StyledFlexBox ref={carouselContent} className="carousel__item-group">
                 {itemList.map((item, index) => (
                     <ItemContainer key={index} order={orderList.length > 0 ? orderList[index] : '0'}>
                         {item}

@@ -6,7 +6,7 @@ const StyledWrapper = styled.div`
     background-color: var(--black);
     overflow-x: hidden;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
 `;
 
 const StyledChildrenContainer = styled(DefaultContainer)`

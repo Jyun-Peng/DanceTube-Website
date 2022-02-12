@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import FlexBox from '../layout/FlexBox';
 import './Carousel.css';
+import arrowLeft from '../icons/arrow-left.svg';
+import arrowRight from '../icons/arrow-right.svg';
 
 const StyledFlexBox = styled(FlexBox)`
     margin: 0 -0.25rem;
@@ -22,16 +24,38 @@ const ItemContainer = styled.div`
     }
 `;
 
-const CarouselWrapper = styled.div`
+const OverflowContentContainer = styled.div`
     overflow: hidden;
 `;
 
 const CarouselButton = styled.button`
-    background-color: var(--white);
+    background-color: var(--gray-bg);
+    color: var(--purple);
+
+    width: 2rem;
+    text-align: center;
+    height: 100%;
     position: absolute;
     top: 0;
-    height: 100%;
-    opacity: 0.2;
+    opacity: 0.4;
+    overflow: hidden;
+
+    border-radius: 0.4rem;
+
+    & > img {
+        margin: 0 auto;
+        height: 1.5rem;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+    &.carousel__btn--prev {
+        left: -2rem;
+    }
+    &.carousel__btn--next {
+        right: -2rem;
+    }
 
     @media (hover: hover) {
         &:hover {
@@ -39,14 +63,16 @@ const CarouselButton = styled.button`
         }
     }
 
-    &:active {
-        opacity: 1;
-    }
-    &.carousel__btn--prev {
-        left: 0;
-    }
-    &.carousel__btn--next {
-        right: 0;
+    @media (max-width: 768px) {
+        & {
+            width: 1.5rem;
+        }
+        &.carousel__btn--prev {
+            left: -1.5rem;
+        }
+        &.carousel__btn--next {
+            right: -1.5rem;
+        }
     }
 `;
 
@@ -91,21 +117,24 @@ function Carousel({ itemList }) {
     }
 
     return (
-        <CarouselWrapper>
-            <StyledFlexBox ref={carouselContent} className="carousel__item-group">
-                {itemList.map((item, index) => (
-                    <ItemContainer key={index} order={orderList.length > 0 ? orderList[index] : '0'}>
-                        {item}
-                    </ItemContainer>
-                ))}
-            </StyledFlexBox>
+        <div>
+            <OverflowContentContainer>
+                <StyledFlexBox ref={carouselContent} className="carousel__item-group">
+                    {itemList.map((item, index) => (
+                        <ItemContainer key={index} order={orderList.length > 0 ? orderList[index] : '0'}>
+                            {item}
+                        </ItemContainer>
+                    ))}
+                </StyledFlexBox>
+            </OverflowContentContainer>
+
             <CarouselButton className="carousel__btn--prev" onClick={() => handleCarouselButtonClick(false)}>
-                prev
+                <img src={arrowLeft} alt="icon-prev" />
             </CarouselButton>
             <CarouselButton className="carousel__btn--next" onClick={() => handleCarouselButtonClick(true)}>
-                next
+                <img src={arrowRight} alt="icon-next" />
             </CarouselButton>
-        </CarouselWrapper>
+        </div>
     );
 }
 

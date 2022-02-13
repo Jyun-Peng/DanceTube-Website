@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledChildrenContainer = styled(DefaultContainer)`
-    padding-top: 2.75rem;
+    padding-top: 3.35rem;
     padding-bottom: 4rem;
 `;
 

@@ -35,7 +35,7 @@ const StyledTitle = styled.h1`
     color: var(--white);
     letter-spacing: 0.1rem;
     /* text-align: center; */
-    padding: 3rem 0 3rem 0;
+    padding: 28vh 0 2rem 0;
 `;
 
 const StyledIntro = styled.div`
@@ -43,7 +43,7 @@ const StyledIntro = styled.div`
     font-weight: 600;
     color: rgba(225, 225, 225, 0.8);
     /* text-align: center; */
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 `;
 
 const VerticalFlexBox = styled.div`
@@ -70,7 +70,7 @@ function Style() {
         <DefaultLayout dropdown>
             {/* <StyledHero heroStyle={style.toLowerCase()} /> */}
             <StyledTitle>{style[0].toUpperCase() + style.slice(1)}</StyledTitle>
-            <StyledIntro>This is an brief introduction of the style .</StyledIntro>
+            <StyledIntro>There will be a brief decription of {style} here.</StyledIntro>
             <VerticalFlexBox>
                 {videoList.map((video, index) => (
                     <BigThumbnailContainer key={index}>

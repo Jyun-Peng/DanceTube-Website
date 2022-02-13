@@ -18,21 +18,11 @@ const StyledContainer = styled.div`
 `;
 
 const ThumbnailTitle = styled.div`
-    padding: 1rem;
+    padding: 0.8rem;
 
     & > h3 {
-        height: 2.4rem;
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 1.2;
-        color: #fefefe;
+        height: 2.86rem;
         overflow: hidden;
-    }
-
-    & > p {
-        font-size: 0.9rem;
-        color: rgba(225, 225, 225, 0.8);
-        margin-bottom: 0.25rem;
     }
 `;
 

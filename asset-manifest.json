@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DanceTube-Website/static/css/main.da64b93c.css",
-    "main.js": "/DanceTube-Website/static/js/main.3d0474ba.js",
+    "main.js": "/DanceTube-Website/static/js/main.0280bb8a.js",
     "static/js/787.f183879e.chunk.js": "/DanceTube-Website/static/js/787.f183879e.chunk.js",
     "static/media/Hero_waacking.jpg": "/DanceTube-Website/static/media/Hero_waacking.c09d43b7933e11533455.jpg",
     "static/media/Hero_popping.jpg": "/DanceTube-Website/static/media/Hero_popping.0436549b0a6c1cf312cb.jpg",
@@ -11,11 +11,11 @@
     "static/media/arrow-left.svg": "/DanceTube-Website/static/media/arrow-left.6a35fc6fd1c0f909345ee9ab3fea2743.svg",
     "static/media/arrow-down.svg": "/DanceTube-Website/static/media/arrow-down.33e9d981860aa83b1735e7057dc68d1b.svg",
     "main.da64b93c.css.map": "/DanceTube-Website/static/css/main.da64b93c.css.map",
-    "main.3d0474ba.js.map": "/DanceTube-Website/static/js/main.3d0474ba.js.map",
+    "main.0280bb8a.js.map": "/DanceTube-Website/static/js/main.0280bb8a.js.map",
     "787.f183879e.chunk.js.map": "/DanceTube-Website/static/js/787.f183879e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da64b93c.css",
-    "static/js/main.3d0474ba.js"
+    "static/js/main.0280bb8a.js"
   ]
 }

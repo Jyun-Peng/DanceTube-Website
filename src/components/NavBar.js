@@ -39,7 +39,6 @@ function DropdownGroup() {
 
     const handleOpen = function (id) {
         let newDropdownState = { 0: false, 1: false };
-        console.log(dropdownState);
         setDropdownState({ ...newDropdownState, [id]: !dropdownState[id] });
         newDropdownState = null;
     };

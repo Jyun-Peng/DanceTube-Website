@@ -22,7 +22,6 @@ const StyledLogo = styled.h3`
 `;
 
 function DropdownGroup() {
-    const [dropdownState, setDropdownState] = useState({ 0: false, 1: false });
     let { style, year } = useParams();
 
     const styleList = [
@@ -37,22 +36,10 @@ function DropdownGroup() {
         { text: '2019', url: process.env.PUBLIC_URL + `/style/${style}/2019` },
     ];
 
-    const handleOpen = function (id) {
-        let newDropdownState = { 0: false, 1: false };
-        setDropdownState({ ...newDropdownState, [id]: !dropdownState[id] });
-        newDropdownState = null;
-    };
-
     return (
         <FlexBox gap={'0.5rem'}>
-            <Dropdown
-                id={0}
-                state={dropdownState[0]}
-                currentText={style[0].toUpperCase() + style.slice(1)}
-                list={styleList}
-                handleClick={handleOpen}
-            />
-            <Dropdown id={1} state={dropdownState[1]} currentText={year} list={yearList} handleClick={handleOpen} />
+            <Dropdown currentText={style[0].toUpperCase() + style.slice(1)} list={styleList} />
+            <Dropdown currentText={year} list={yearList} />
         </FlexBox>
     );
 }

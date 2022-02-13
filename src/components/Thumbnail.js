@@ -26,7 +26,7 @@ const ThumbnailTitle = styled.div`
     }
 `;
 
-function Thumbnail({ imageURL = '', title = '', videoId = '', publishedDate = '', keyword = '' }) {
+function Thumbnail({ imageURL, title, videoId, publishedDate, keyword }) {
     return (
         <Link to={process.env.PUBLIC_URL + `/player/${keyword}/${videoId}`} style={{ width: '100%' }}>
             <StyledContainer>

@@ -1,4 +1,3 @@
-import react from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import formatter from '../functional/formatter';
@@ -10,39 +9,26 @@ const StyledImage = styled.img`
     object-position: center;
     filter: saturate(80%);
     border-radius: 0.3rem;
+
+    @media (max-width: 480px) {
+        aspect-ratio: 10/9;
+    }
 `;
 
 const StyledContainer = styled.div`
     display: flex;
     align-items: flex-start;
     overflow: hidden;
-    /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
 `;
 
 const ThumbnailTitle = styled.div`
     flex: 1 1 auto;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
 
     & > h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        line-height: 1.2;
-        color: var(--white);
         overflow: hidden;
-        margin-bottom: 0.5rem;
-    }
-
-    & > h4 {
-        font-size: 1rem;
-        line-height: 1.2;
-        color: var(--gray-text);
-        overflow: hidden;
-    }
-
-    & > p {
-        font-size: 0.9rem;
-        color: var(--gray-text);
-        margin-bottom: 0.75rem;
+        margin: 0.4rem 0 0.8rem 0;
+        max-height: 2.86rem;
     }
 `;
 
@@ -62,9 +48,9 @@ function BigThumbnail({
             <StyledContainer>
                 <StyledImage src={imageURL} alt="image" />
                 <ThumbnailTitle>
-                    <p>{`發布日期：${formatter.formatDate(publishedDate)}`}</p>
+                    <p>{`${formatter.formatDate(publishedDate)}`}</p>
                     <h3>{title}</h3>
-                    <h4>{channelTitle}</h4>
+                    <p>{channelTitle}</p>
                 </ThumbnailTitle>
             </StyledContainer>
         </Link>

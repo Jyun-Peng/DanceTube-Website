@@ -7,7 +7,7 @@ import Dropdown from './Dropdown';
 
 const StyledHeader = styled.header`
     /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -17,8 +17,8 @@ const StyledHeader = styled.header`
 
 const StyledLogo = styled.h3`
     font-size: 1.75rem;
-    color: var(--white);
     font-weight: 600;
+    line-height: 1;
 `;
 
 function DropdownGroup() {

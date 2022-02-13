@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const ListContainer = styled.div`
     & li > a {
         display: block;
         width: 100%;
-        padding: 0.5rem 1.25rem 0.5rem 0.5rem;
+        padding: 0.5rem 1.25rem 0.5rem 1rem;
         font-size: 1rem;
         font-weight: 600;
 
@@ -32,12 +32,38 @@ const ArrowSvg = styled.img`
     transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
-function Dropdown({ state, id, currentText, list, handleClick }) {
-    // const [isOpen, setIsOpen] = useState(false);
+function DropdownList({ list, isOpen, onClickOutside, onDirectTo }) {
+    const ref = useRef(null);
 
-    // const handleClick = function () {
-    //     setIsOpen(!isOpen);
-    // };
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                onClickOutside && onClickOutside();
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [ref]);
+
+    if (!isOpen) return null;
+
+    return (
+        <ListContainer ref={ref} onClick={() => onDirectTo()}>
+            <ul>
+                {list.map((ele) => (
+                    <li>
+                        <Link to={ele.url}>{ele.text}</Link>
+                    </li>
+                ))}
+            </ul>
+        </ListContainer>
+    );
+}
+
+function Dropdown({ currentText, list }) {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
@@ -45,23 +71,18 @@ function Dropdown({ state, id, currentText, list, handleClick }) {
                 text={
                     <FlexBox gap="0.5rem">
                         <span>{currentText}</span>
-                        <ArrowSvg src={arrow} isOpen={state} />
+                        <ArrowSvg src={arrow} isOpen={isOpen} />
                     </FlexBox>
                 }
-                handleClick={() => handleClick(id)}
+                handleClick={() => setIsOpen(true)}
                 bgColor={'--gray-bg'}
             />
-            {state && (
-                <ListContainer onClick={() => handleClick(id)}>
-                    <ul>
-                        {list.map((ele) => (
-                            <li>
-                                <Link to={ele.url}>{ele.text}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </ListContainer>
-            )}
+            <DropdownList
+                list={list}
+                isOpen={isOpen}
+                onClickOutside={() => setIsOpen(false)}
+                onDirectTo={() => setIsOpen(false)}
+            />
         </div>
     );
 }

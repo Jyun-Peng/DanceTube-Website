@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import DefaultContainer from '../layout/DefaultContainer';
 import FlexBox from '../layout/FlexBox';
 import Dropdown from './Dropdown';
+import Button from './Button';
 
 const StyledHeader = styled.header`
     /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
@@ -44,7 +45,7 @@ function DropdownGroup() {
     );
 }
 
-function NavBar({ dropdown }) {
+function NavBar({ dropdown, button }) {
     let { style, year } = useParams();
 
     return (
@@ -56,6 +57,13 @@ function NavBar({ dropdown }) {
                     </Link>
 
                     {dropdown && <DropdownGroup />}
+                    {button && (
+                        <Button
+                            text="more"
+                            url={process.env.PUBLIC_URL + `/style/${style}/2021`}
+                            bgColor={'--gray-bg'}
+                        />
+                    )}
                 </FlexBox>
             </DefaultContainer>
         </StyledHeader>

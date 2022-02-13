@@ -14,10 +14,10 @@ const StyledChildrenContainer = styled(DefaultContainer)`
     padding-bottom: 4rem;
 `;
 
-function DefaultLayout({ children, dropdown }) {
+function DefaultLayout({ children, dropdown, button }) {
     return (
         <StyledWrapper>
-            <NavBar dropdown={dropdown} />
+            <NavBar dropdown={dropdown} button={button} />
             <StyledChildrenContainer>{children}</StyledChildrenContainer>
         </StyledWrapper>
     );

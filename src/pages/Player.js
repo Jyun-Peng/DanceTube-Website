@@ -43,7 +43,7 @@ function Player() {
     };
 
     return (
-        <DefaultLayout>
+        <DefaultLayout button>
             <StyledIframe
                 src={`https://www.youtube.com/embed/${videoId}`}
                 title="YouTube video player"

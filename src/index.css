@@ -10,7 +10,7 @@
     --white: #fefefe;
     --black: #232323;
     --gray-text: rgba(225, 225, 225, 0.8);
-    --gray-bg: #333333;
+    --gray-bg: #404040;
     --purple: #d355ff;
 }
 
@@ -18,6 +18,11 @@ html {
     font-size: 16px;
     color: var(--black);
     line-height: 1;
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
 }
 body {
     margin: 0;
@@ -29,4 +34,17 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--white);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: var(--gray-text);
 }

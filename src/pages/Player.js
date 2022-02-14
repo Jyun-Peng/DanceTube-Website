@@ -9,7 +9,7 @@ import formatter from '../functional/formatter';
 const StatisticsSection = styled(FlexBox)`
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 0.0625rem solid var(--gray-bg);
+    border-bottom: 0.0625rem solid var(--gray);
 `;
 
 const StyledIframe = styled.iframe`

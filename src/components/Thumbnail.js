@@ -11,10 +11,18 @@ const StyledImage = styled.img`
 
 const StyledContainer = styled.div`
     width: 100%;
-    border-radius: 0.3rem 0.3rem 0 0;
+    border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
-    border-bottom: 0.1rem solid var(--purple);
+    background-color: transparent;
+    transition: background-color 0.1s;
+
+    @media (hover: hover) {
+        &:hover {
+            transition: none;
+            background-color: var(--black-hover);
+        }
+    }
 `;
 
 const ThumbnailTitle = styled.div`

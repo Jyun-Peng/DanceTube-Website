@@ -50,13 +50,19 @@ const VerticalFlexBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 0.15rem solid var(--purple);
 `;
 
 const BigThumbnailContainer = styled.div`
     width: 100%;
-    &:not(:last-child) {
-        margin-bottom: 1rem;
+    padding: 0.5rem 0;
+
+    border-right: 0.25rem solid transparent;
+    transition: border 0.1s;
+    @media (hover: hover) {
+        &:hover {
+            transition: none;
+            border-color: var(--purple);
+        }
     }
 `;
 

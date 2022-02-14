@@ -29,36 +29,47 @@ const OverflowContentContainer = styled.div`
 `;
 
 const CarouselButton = styled.button`
-    background-color: var(--gray-bg);
-    color: var(--purple);
-
-    width: 2rem;
+    background-color: var(--gray);
+    width: 1.75rem;
     text-align: center;
     height: 100%;
     position: absolute;
     top: 0;
-    opacity: 0.4;
+    opacity: 0.3;
     overflow: hidden;
 
     border-radius: 0.4rem;
+
+    transition: opacity 0.1s;
 
     & > img {
         margin: 0 auto;
         height: 1.5rem;
     }
 
-    &:active {
-        opacity: 1;
-    }
     &.carousel__btn--prev {
-        left: -2rem;
+        left: -0.25rem;
+        transform: translateX(-100%);
     }
     &.carousel__btn--next {
-        right: -2rem;
+        right: -0.25rem;
+        transform: translateX(100%);
     }
 
     @media (hover: hover) {
         &:hover {
+            transition: none;
+            opacity: 1;
+        }
+        &:active {
+            transition: none;
+            opacity: 0.6;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            transition: none;
             opacity: 1;
         }
     }
@@ -66,12 +77,6 @@ const CarouselButton = styled.button`
     @media (max-width: 768px) {
         & {
             width: 1.5rem;
-        }
-        &.carousel__btn--prev {
-            left: -1.5rem;
-        }
-        &.carousel__btn--next {
-            right: -1.5rem;
         }
     }
 `;

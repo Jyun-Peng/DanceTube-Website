@@ -58,11 +58,7 @@ function NavBar({ dropdown, button }) {
 
                     {dropdown && <DropdownGroup />}
                     {button && (
-                        <Button
-                            text="more"
-                            url={process.env.PUBLIC_URL + `/style/${style}/2021`}
-                            bgColor={'--gray-bg'}
-                        />
+                        <Button text={style} url={process.env.PUBLIC_URL + `/style/${style}/2021`} color="gray" />
                     )}
                 </FlexBox>
             </DefaultContainer>

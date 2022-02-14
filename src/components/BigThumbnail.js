@@ -17,7 +17,7 @@ const StyledImage = styled.img`
 
 const StyledContainer = styled.div`
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     overflow: hidden;
 `;
 

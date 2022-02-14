@@ -41,9 +41,9 @@ function DropdownList({ list, isOpen, onClickOutside, onDirectTo }) {
                 onClickOutside && onClickOutside();
             }
         }
-        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('mouseup', handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('mouseup', handleClickOutside);
         };
     }, [ref]);
 
@@ -75,7 +75,7 @@ function Dropdown({ currentText, list }) {
                     </FlexBox>
                 }
                 handleClick={() => setIsOpen(true)}
-                bgColor={'--gray-bg'}
+                color={'gray'}
             />
             <DropdownList
                 list={list}

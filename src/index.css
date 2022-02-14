@@ -9,9 +9,14 @@
 :root {
     --white: #fefefe;
     --black: #232323;
+    --black-hover: #333333;
     --gray-text: rgba(225, 225, 225, 0.8);
-    --gray-bg: #404040;
-    --purple: #d355ff;
+    --gray: #404040;
+    --gray-hover: #4d4d4d;
+    --gray-active: #3b3b3b;
+    --purple: #bf41ec;
+    --purple-hover: #ca37ff;
+    --purple-active: #ae3ad8;
 }
 
 html {

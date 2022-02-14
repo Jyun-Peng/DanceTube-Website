@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 import Button from './Button';
 import FlexBox from '../layout/FlexBox';
-import arrow from '../images/Logo/arrow-down.svg';
+import arrow from '../icons/arrow-down.svg';
+import Icon from '../functional/Icon';
 
 const ListContainer = styled.div`
     position: absolute;
@@ -27,8 +28,7 @@ const ListContainer = styled.div`
     }
 `;
 
-const ArrowSvg = styled.img`
-    width: 1rem;
+const ArrowSvg = styled(Icon)`
     transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
@@ -71,7 +71,7 @@ function Dropdown({ currentText, list }) {
                 text={
                     <FlexBox gap="0.5rem">
                         <span>{currentText}</span>
-                        <ArrowSvg src={arrow} isOpen={isOpen} />
+                        <ArrowSvg src={arrow} isOpen={isOpen} alt="arrow-icon--up/down" size="0.6rem" />
                     </FlexBox>
                 }
                 handleClick={() => setIsOpen(true)}

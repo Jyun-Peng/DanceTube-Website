@@ -4,6 +4,7 @@ import FlexBox from '../layout/FlexBox';
 import './Carousel.css';
 import arrowLeft from '../icons/arrow-left.svg';
 import arrowRight from '../icons/arrow-right.svg';
+import Icon from '../functional/Icon';
 
 const StyledFlexBox = styled(FlexBox)`
     margin: 0 -0.25rem;
@@ -44,7 +45,6 @@ const CarouselButton = styled.button`
 
     & > img {
         margin: 0 auto;
-        height: 1.5rem;
     }
 
     &.carousel__btn--prev {
@@ -134,10 +134,10 @@ function Carousel({ itemList }) {
             </OverflowContentContainer>
 
             <CarouselButton className="carousel__btn--prev" onClick={() => handleCarouselButtonClick(false)}>
-                <img src={arrowLeft} alt="icon-prev" />
+                <Icon src={arrowLeft} alt="arrow-icon--left" size="1.5rem" />
             </CarouselButton>
             <CarouselButton className="carousel__btn--next" onClick={() => handleCarouselButtonClick(true)}>
-                <img src={arrowRight} alt="icon-next" />
+                <Icon src={arrowRight} alt="arrow-icon--right" size="1.5rem" />
             </CarouselButton>
         </div>
     );

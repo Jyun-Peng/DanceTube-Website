@@ -5,6 +5,8 @@ import DefaultContainer from '../layout/DefaultContainer';
 import FlexBox from '../layout/FlexBox';
 import Dropdown from './Dropdown';
 import Button from './Button';
+import arrow from '../icons/arrow-left.svg';
+import Icon from '../functional/Icon';
 
 const StyledHeader = styled.header`
     /* box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2); */
@@ -58,7 +60,16 @@ function NavBar({ dropdown, button }) {
 
                     {dropdown && <DropdownGroup />}
                     {button && (
-                        <Button text={style} url={process.env.PUBLIC_URL + `/style/${style}/2021`} color="gray" />
+                        <Button
+                            text={
+                                <FlexBox gap="0.5rem">
+                                    <Icon src={arrow} alt="arrow-icon--right" />
+                                    <span>{style}</span>
+                                </FlexBox>
+                            }
+                            url={process.env.PUBLIC_URL + `/style/${style}/2021`}
+                            color="gray"
+                        />
                     )}
                 </FlexBox>
             </DefaultContainer>

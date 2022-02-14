@@ -1,18 +1,26 @@
-import { useEffect, useState, useRef } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DefaultLayout from '../layout/DefaultLayout';
 import Thumbnail from '../components/Thumbnail';
 import Button from '../components/Button';
 import { searchVideoList } from '../functional/GetData';
-import FlexBox from '../layout/FlexBox';
 import Carousel from '../components/Carousel';
 
 function Section({ title }) {
     const [videoList, setVideoList] = useState([]);
+    const [fetchState, setFetchState] = useState({ message: '', ok: true });
     const keyword = title.toLowerCase();
 
+    let navigate = useNavigate();
+
     //Fetch youtube video
-    useEffect(() => searchVideoList(keyword, null, 5, setVideoList), []);
+    useEffect(() => {
+        searchVideoList(keyword, null, 5, setVideoList, setFetchState);
+    }, []);
+
+    useEffect(() => {
+        if (!fetchState.ok) navigate(process.env.PUBLIC_URL + '/not-found/' + fetchState.message);
+    }, [fetchState]);
 
     return (
         <div className="pt-8">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import DefaultLayout from '../layout/DefaultLayout';
@@ -68,9 +68,14 @@ const BigThumbnailContainer = styled.div`
 
 function Style() {
     const [videoList, setVideoList] = useState([]);
+    const [fetchState, setFetchState] = useState({ message: '', ok: true });
     let { style, year } = useParams();
+    let navigate = useNavigate();
 
-    useEffect(() => searchVideoList(style, year, 20, setVideoList), [style, year]);
+    useEffect(() => searchVideoList(style, year, 20, setVideoList, setFetchState), [style, year]);
+    useEffect(() => {
+        if (!fetchState.ok) navigate(process.env.PUBLIC_URL + '/not-found/' + fetchState.message);
+    }, [fetchState]);
 
     return (
         <DefaultLayout dropdown>

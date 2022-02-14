@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import DefaultLayout from '../layout/DefaultLayout';
-import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import FlexBox from '../layout/FlexBox';
 import { getVideo } from '../functional/GetData';
@@ -25,11 +25,16 @@ const StyledTitle = styled.h3`
 
 function Player() {
     const [video, setVideo] = useState(null);
+    const [fetchState, setFetchState] = useState({ message: '', ok: true });
     let { videoId } = useParams();
+    let navigate = useNavigate();
 
     useEffect(() => {
-        getVideo(videoId, setVideo);
+        getVideo(videoId, setVideo, setFetchState);
     }, [videoId]);
+    useEffect(() => {
+        if (!fetchState.ok) navigate(process.env.PUBLIC_URL + '/not-found/' + fetchState.message);
+    }, [fetchState]);
 
     const handleDescription = function (text) {
         const textArr = text.split('\n');
